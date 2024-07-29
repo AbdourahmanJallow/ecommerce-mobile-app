@@ -13,12 +13,12 @@ class _ProductDetailsState extends State<ProductDetails> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xFFE4E7EC),
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
+        // leading: IconButton(
+        //   icon: const Icon(Icons.arrow_back_ios),
+        //   onPressed: () {
+        //     Navigator.pop(context);
+        //   },
+        // ),
       ),
       body: Container(
           decoration: const BoxDecoration(color: Color(0xFFE4E7EC)),
@@ -31,7 +31,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                 height: MediaQuery.of(context).size.height * 0.4,
                 width: double.infinity,
                 child: Image.asset(
-                  'images/sneakers.png',
+                  'images/shirt.png',
                   height: double.infinity,
                 ),
               ),
@@ -147,7 +147,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                               ),
                             ),
                             const SizedBox(
-                              height: 15,
+                              height: 1,
                             ),
                             SizedBox(
                               width: double.infinity,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jendal/components/custom_bottom_nav.dart';
 
 class Profile extends StatelessWidget {
   const Profile({super.key});
@@ -14,6 +15,7 @@ class Profile extends StatelessWidget {
           style: TextStyle(fontSize: 25),
         ),
       )),
+      bottomNavigationBar: const CustomBottomNav(),
     );
   }
 }

@@ -26,7 +26,7 @@ class ProductCard extends StatelessWidget {
             ),
             child: Flexible(
               child: Image.asset(
-                'images/sneakers.png',
+                index % 2 == 0 ? 'images/shirt.png' : 'images/sneakers.png',
                 fit: BoxFit.fitHeight,
               ),
             ),

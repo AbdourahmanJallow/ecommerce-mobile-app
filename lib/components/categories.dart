@@ -13,12 +13,12 @@ class _CategoriesState extends State<Categories> {
   @override
   Widget build(BuildContext context) {
     final List<Map<String, dynamic>> categories = [
-      {'label': 'Laptops'},
-      {'label': 'Phones'},
-      {'label': 'Consoles'},
-      {'label': 'Jerseys'},
-      {'label': 'Shoes'},
-      {'label': 'Clothes'},
+      {'label': 'Electronics'},
+      {'label': 'Fashion'},
+      {'label': 'Sports'},
+      {'label': 'Health'},
+      {'label': 'Furniture'},
+      {'label': 'Food'},
     ];
 
     return Column(
@@ -30,7 +30,7 @@ class _CategoriesState extends State<Categories> {
         ),
         Container(
           margin: const EdgeInsets.symmetric(vertical: 10.0),
-          height: 40,
+          height: 100,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: categories.length,
@@ -41,24 +41,30 @@ class _CategoriesState extends State<Categories> {
                     activeIndex = index;
                   });
                 },
-                child: Container(
-                  width: 120,
-                  margin: const EdgeInsets.only(right: 20),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    border: Border.all(color: Colors.grey.shade300),
-                    color: activeIndex == index
-                        ? const Color(0xFF6A21E9)
-                        : const Color(0xFFE4E7EC),
-                  ),
-                  child: Center(
-                    child: Text(
-                      categories[index]['label'],
-                      style: TextStyle(
-                          color: activeIndex == index
-                              ? Colors.white
-                              : const Color(0xFF200253),
-                          fontSize: 16),
+                child: Center(
+                  child: Container(
+                    width: 120,
+                    height: 50,
+                    padding: const EdgeInsets.all(10),
+                    margin: const EdgeInsets.only(right: 20),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(50),
+                      border: Border.all(color: Colors.grey.shade300),
+                      color: activeIndex == index
+                          ? Colors.deepOrange
+                          : const Color(0xFFE4E7EC),
+                    ),
+                    child: Center(
+                      widthFactor: double.infinity,
+                      heightFactor: double.infinity,
+                      child: Text(
+                        categories[index]['label'],
+                        style: TextStyle(
+                            color: activeIndex == index
+                                ? Colors.white
+                                : const Color(0xFF200253),
+                            fontSize: 16),
+                      ),
                     ),
                   ),
                 ),
