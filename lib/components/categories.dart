@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Categories extends StatefulWidget {
   const Categories({super.key});
@@ -24,13 +25,13 @@ class _CategoriesState extends State<Categories> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
+        Text(
           'Categories',
-          style: TextStyle(fontSize: 25, fontWeight: FontWeight.w900),
+          style: TextStyle(fontSize: 25.sp, fontWeight: FontWeight.w900),
         ),
         Container(
-          margin: const EdgeInsets.symmetric(vertical: 10.0),
-          height: 40,
+          margin: EdgeInsets.symmetric(vertical: 5.h),
+          height: 40.h,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: categories.length,
@@ -43,16 +44,16 @@ class _CategoriesState extends State<Categories> {
                 },
                 child: Center(
                   child: Container(
-                    width: 120,
+                    width: 100.w,
                     height: double.infinity,
                     padding: const EdgeInsets.all(10),
                     margin: const EdgeInsets.only(right: 20),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50),
-                      border: Border.all(
-                          color: activeIndex == index
-                              ? Colors.black
-                              : Colors.transparent),
+                      borderRadius: BorderRadius.all(Radius.circular(50.h)),
+                      // border: Border.all(
+                      //     color: activeIndex == index
+                      //         ? Colors.black
+                      //         : Colors.transparent),
                       color: activeIndex == index
                           ? Colors.deepOrange
                           : const Color(0xFFE4E7EC),
@@ -66,7 +67,7 @@ class _CategoriesState extends State<Categories> {
                             color: activeIndex == index
                                 ? Colors.white
                                 : const Color(0xFF200253),
-                            fontSize: 16),
+                            fontSize: 16.sp),
                       ),
                     ),
                   ),

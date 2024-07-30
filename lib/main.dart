@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:jendal/components/data_provider.dart';
 import 'package:jendal/screens/cart.dart';
 import 'package:jendal/screens/favorites.dart';
 import 'package:jendal/screens/home.dart';
 import 'package:jendal/screens/profile.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MultiProvider(
+      providers: [ChangeNotifierProvider(create: (_) => NavigationProvider())],
+      child: const MyApp()));
 }
 
 class MyApp extends StatefulWidget {

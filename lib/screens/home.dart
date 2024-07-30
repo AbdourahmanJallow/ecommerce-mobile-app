@@ -13,7 +13,12 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  int selectedItemIndex = 0;
+  int selectedIndex = 0;
+
+  void setSelectedIndex(int index) {
+    selectedIndex = index;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
