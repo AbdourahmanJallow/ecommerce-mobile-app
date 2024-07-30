@@ -26,6 +26,7 @@ class CustomBottomNavState extends State<CustomBottomNav> {
           gap: 8,
           iconSize: 28.0,
           selectedIndex: selectedItemIndex,
+          rippleColor: Colors.deepOrange,
           onTabChange: (index) {
             selectedItemIndex = index;
           },
@@ -34,26 +35,26 @@ class CustomBottomNavState extends State<CustomBottomNav> {
               text: 'Home',
               icon: LineIcons.home,
               onPressed: () {
-                Navigator.pushNamed(context, '/home');
+                // Navigator.pushNamed(context, '/home');
               },
             ),
             GButton(
                 text: 'Favorites',
                 icon: LineIcons.heart,
                 onPressed: () {
-                  Navigator.pushNamed(context, '/favorites');
+                  // Navigator.pushNamed(context, '/favorites');
                 }),
             GButton(
                 text: 'Cart',
                 icon: LineIcons.dashcube,
                 onPressed: () {
-                  Navigator.pushNamed(context, '/cart');
+                  // Navigator.pushNamed(context, '/cart');
                 }),
             GButton(
                 text: 'Account',
                 icon: LineIcons.user,
                 onPressed: () {
-                  Navigator.pushNamed(context, '/profile');
+                  // Navigator.pushNamed(context, '/profile');
                 })
           ],
         ),

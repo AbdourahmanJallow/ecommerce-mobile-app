@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:jendal/components/custom_bottom_nav.dart';
+import 'package:jendal/components/custom_button.dart';
 
 class Cart extends StatefulWidget {
   const Cart({super.key});
@@ -27,19 +29,19 @@ class _CartState extends State<Cart> {
           decoration: const BoxDecoration(color: Colors.white),
           child: Column(children: [
             Expanded(
-              child: Container(
+              child: SizedBox(
                 width: double.infinity,
                 child: GridView(
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 1,
-                      mainAxisExtent: 130,
-                      mainAxisSpacing: 30),
+                      mainAxisExtent: 100.h,
+                      mainAxisSpacing: 30.h),
                   children: List.generate(3, (index) {
                     return Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Container(
-                          width: 100,
+                          width: 100.w,
                           height: double.infinity,
                           decoration: const BoxDecoration(
                             borderRadius: BorderRadius.all(Radius.circular(15)),
@@ -52,57 +54,66 @@ class _CartState extends State<Cart> {
                             ),
                           ),
                         ),
-                        const SizedBox(
-                          width: 20,
+                        SizedBox(
+                          width: 8.w,
                         ),
-                        const Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Nike Sneakers',
-                              style: TextStyle(
-                                  fontSize: 25, fontWeight: FontWeight.w900),
-                            ),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            Text(
-                              '\$129.99',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w900, fontSize: 23),
-                            ),
-                          ],
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Nike Sneakers Pro 2024 VLC-DLC',
+                                style: TextStyle(
+                                    fontSize: 18.sp,
+                                    fontWeight: FontWeight.w900),
+                              ),
+                              Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    '\$129.99',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w900,
+                                        fontSize: 16.sp),
+                                  ),
+                                  Container(
+                                      height: 20.h,
+                                      decoration: BoxDecoration(
+                                          color: Colors.deepOrange.shade100
+                                              .withOpacity(0.4),
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(20.h))),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          IconButton(
+                                              onPressed: () {},
+                                              icon: Icon(
+                                                Icons.minimize,
+                                                size: 20.h,
+                                              )),
+                                          Text(
+                                            '3',
+                                            style: TextStyle(fontSize: 20.sp),
+                                          ),
+                                          IconButton(
+                                              onPressed: () {},
+                                              icon: Icon(
+                                                Icons.add,
+                                                size: 20.h,
+                                              )),
+                                        ],
+                                      ))
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Container(
-                            width: 45,
-                            decoration: BoxDecoration(
-                                color: Colors.deepPurple.shade100,
-                                borderRadius: const BorderRadius.all(
-                                    Radius.circular(30))),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                IconButton(
-                                    onPressed: () {},
-                                    icon: const Icon(
-                                      Icons.minimize,
-                                      size: 25,
-                                    )),
-                                const Text(
-                                  '3',
-                                  style: TextStyle(fontSize: 20),
-                                ),
-                                IconButton(
-                                    onPressed: () {},
-                                    icon: const Icon(
-                                      Icons.add,
-                                      size: 25,
-                                    )),
-                              ],
-                            ))
                       ],
                     );
                   }),
@@ -114,35 +125,24 @@ class _CartState extends State<Cart> {
             ),
             Column(
               children: [
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       'Subtotal',
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+                      style: TextStyle(
+                          fontSize: 18.sp, fontWeight: FontWeight.w700),
                     ),
                     Text('\$648.7',
                         style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.w700))
+                            fontSize: 16.sp, fontWeight: FontWeight.w700))
                   ],
                 ),
-                const SizedBox(
-                  height: 5,
-                ),
                 SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFF6A21E9),
-                        padding: const EdgeInsets.symmetric(vertical: 12)),
-                    child: const Text(
-                      'Checkout',
-                      style: TextStyle(fontSize: 18, color: Colors.white),
-                    ),
-                  ),
-                )
+                  height: 5.h,
+                ),
+                CustomButton(
+                    color: Colors.deepOrange, title: 'Checkout', onTap: () {})
               ],
             )
           ])),

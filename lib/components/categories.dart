@@ -30,7 +30,7 @@ class _CategoriesState extends State<Categories> {
         ),
         Container(
           margin: const EdgeInsets.symmetric(vertical: 10.0),
-          height: 100,
+          height: 40,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: categories.length,
@@ -44,12 +44,15 @@ class _CategoriesState extends State<Categories> {
                 child: Center(
                   child: Container(
                     width: 120,
-                    height: 50,
+                    height: double.infinity,
                     padding: const EdgeInsets.all(10),
                     margin: const EdgeInsets.only(right: 20),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(50),
-                      border: Border.all(color: Colors.grey.shade300),
+                      border: Border.all(
+                          color: activeIndex == index
+                              ? Colors.black
+                              : Colors.transparent),
                       color: activeIndex == index
                           ? Colors.deepOrange
                           : const Color(0xFFE4E7EC),
