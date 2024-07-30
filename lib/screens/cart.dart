@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:jendal/components/custom_bottom_nav.dart';
 import 'package:jendal/components/custom_button.dart';
@@ -81,7 +80,7 @@ class _CartState extends State<Cart> {
                                         fontSize: 16.sp),
                                   ),
                                   Container(
-                                      height: 20.h,
+                                      height: 25.h,
                                       decoration: BoxDecoration(
                                           color: Colors.deepOrange.shade100
                                               .withOpacity(0.4),
@@ -89,23 +88,25 @@ class _CartState extends State<Cart> {
                                               Radius.circular(20.h))),
                                       child: Row(
                                         mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
+                                            MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
                                         children: [
                                           IconButton(
                                               onPressed: () {},
                                               icon: Icon(
-                                                Icons.minimize,
-                                                size: 20.h,
+                                                Icons.remove,
+                                                size: 15.h,
                                               )),
                                           Text(
                                             '3',
-                                            style: TextStyle(fontSize: 20.sp),
+                                            style: TextStyle(fontSize: 18.sp),
                                           ),
                                           IconButton(
                                               onPressed: () {},
                                               icon: Icon(
                                                 Icons.add,
-                                                size: 20.h,
+                                                size: 15.h,
                                               )),
                                         ],
                                       ))
