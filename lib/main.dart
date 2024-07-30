@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:jendal/components/data_provider.dart';
-import 'package:jendal/screens/cart.dart';
-import 'package:jendal/screens/favorites.dart';
-import 'package:jendal/screens/home.dart';
-import 'package:jendal/screens/profile.dart';
+import 'package:jendal/core/components/data_provider.dart';
+import 'package:jendal/core/screens/cart.dart';
+import 'package:jendal/core/screens/favorites.dart';
+import 'package:jendal/core/screens/home.dart';
+import 'package:jendal/core/screens/profile.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -32,9 +32,8 @@ class _MyAppState extends State<MyApp> {
         return MaterialApp(
           title: 'Jendal',
           initialRoute: '/home',
-          theme: ThemeData(
-            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
-          ),
+          // theme: MyAppThemes.lightTheme,
+          // darkTheme: MyAppThemes.darkTheme,
           debugShowCheckedModeBanner: false,
           routes: {
             '/home': (context) => const Home(),

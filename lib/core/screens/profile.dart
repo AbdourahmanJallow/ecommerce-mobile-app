@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:jendal/components/custom_bottom_nav.dart';
+import 'package:jendal/core/components/custom_bottom_nav.dart';
 
-class Favorites extends StatelessWidget {
-  const Favorites({super.key});
+class Profile extends StatelessWidget {
+  const Profile({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class Favorites extends StatelessWidget {
       body: Container(
           child: const Center(
         child: Text(
-          'Favorites Page',
+          'Profile Page',
           style: TextStyle(fontSize: 25),
         ),
       )),

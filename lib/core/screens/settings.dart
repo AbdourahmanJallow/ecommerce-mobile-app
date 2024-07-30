@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:jendal/components/custom_bottom_nav.dart';
+import 'package:jendal/core/components/custom_bottom_nav.dart';
 
 class Settings extends StatelessWidget {
   const Settings({super.key});

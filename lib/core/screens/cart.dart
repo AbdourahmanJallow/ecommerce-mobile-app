@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:jendal/components/custom_bottom_nav.dart';
-import 'package:jendal/components/custom_button.dart';
+import 'package:jendal/core/components/custom_bottom_nav.dart';
+import 'package:jendal/core/components/custom_button.dart';
 
 class Cart extends StatefulWidget {
   const Cart({super.key});

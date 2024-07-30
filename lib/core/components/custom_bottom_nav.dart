@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:jendal/components/data_provider.dart';
+import 'package:jendal/core/components/data_provider.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:provider/provider.dart';
 
@@ -60,7 +60,7 @@ class CustomBottomNavState extends State<CustomBottomNav> {
                   text: 'Account',
                   icon: LineIcons.user,
                   onPressed: () {
-                    // Navigator.pushNamed(context, '/profile');
+                    Navigator.pushNamed(context, '/profile');
                   })
             ],
           ),

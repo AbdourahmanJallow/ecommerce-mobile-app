@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:badges/badges.dart' as badges;
-import 'package:jendal/components/categories.dart';
-import 'package:jendal/components/custom_bottom_nav.dart';
-import 'package:jendal/components/products_grid.dart';
-import 'package:jendal/components/search.dart';
+import 'package:jendal/core/components/categories.dart';
+import 'package:jendal/core/components/custom_bottom_nav.dart';
+import 'package:jendal/core/components/products_grid.dart';
+import 'package:jendal/core/components/search.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -13,12 +13,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  int selectedIndex = 0;
-
-  void setSelectedIndex(int index) {
-    selectedIndex = index;
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

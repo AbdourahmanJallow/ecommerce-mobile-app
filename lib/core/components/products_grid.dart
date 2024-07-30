@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:jendal/components/product_card.dart';
-import 'package:jendal/screens/product_details.dart';
+import 'package:jendal/core/components/product_card.dart';
+import 'package:jendal/core/screens/product_details.dart';
 
 class ProductsGrid extends StatefulWidget {
   const ProductsGrid({super.key});
